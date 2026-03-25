@@ -9,9 +9,8 @@
 
 **一个功能完善的个人博客与作品集网站，支持文章管理、页面配置和后台管理**
 
-[在线预览](#) 
+[预览-website](https://aravy-web.netlify.app) · [预览-后台](https://app.netlify.com/projects/aravy-web)
 <!-- · [文档](#) · [示例](#) -->
-
 </div>
 
 ---

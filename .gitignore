@@ -57,4 +57,5 @@ playwright-report/
 # pnpm lock file conversion
 pnpm-lock.yaml
 
-.vercel
+# Local Netlify folder
+.netlify
