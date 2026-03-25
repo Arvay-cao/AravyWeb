@@ -25,7 +25,6 @@ import {
   useSensor,
   useSensors,
   type DragEndEvent,
-  type DragOverEvent,
 } from '@dnd-kit/core';
 import {
   SortableContext,
@@ -399,7 +398,7 @@ export default function AdminConfigProjects() {
     // Drag started
   }, []);
 
-  const handleDragOver = useCallback((event: DragOverEvent) => {
+  const handleDragOver = useCallback(() => {
     // Dragging over target
   }, []);
 
