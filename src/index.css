@@ -127,7 +127,7 @@
   }
 }
 
-/* Custom cursor styles */
+/* Custom cursor global styles */
 .custom-cursor {
   position: fixed;
   width: 12px;
@@ -142,25 +142,6 @@
 }
 
 .custom-cursor.hover {
-  width: 40px;
-  height: 40px;
-}
-
-/* Custom cursor for admin panel - same style as frontend */
-.admin-panel .custom-cursor {
-  position: fixed;
-  width: 12px;
-  height: 12px;
-  background: white;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transition: transform 0.15s ease-out, width 0.2s ease, height 0.2s ease;
-  transform: translate(-50%, -50%);
-}
-
-.admin-panel .custom-cursor.hover {
   width: 40px;
   height: 40px;
 }

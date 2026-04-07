@@ -45,9 +45,6 @@ function HomePage() {
   // Initialize smooth scroll
   useLenis();
 
-  // Initialize custom cursor
-  useCustomCursor();
-
   useEffect(() => {
     // Background color transitions based on sections
     const sections = [
@@ -125,6 +122,9 @@ function HomePage() {
 }
 
 function App() {
+  // Initialize custom cursor globally for all routes
+  useCustomCursor();
+
   // Set document language and title
   useEffect(() => {
     if (siteConfig.language) {

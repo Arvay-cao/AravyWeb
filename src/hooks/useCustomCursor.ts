@@ -10,14 +10,30 @@ export const useCustomCursor = () => {
 
   useEffect(() => {
     const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
-    if (isTouchDevice) return;
+    console.log('[useCustomCursor] Is touch device:', isTouchDevice);
+    if (isTouchDevice) {
+      console.log('[useCustomCursor] Touch device detected, skipping cursor creation');
+      return;
+    }
 
+    console.log('[useCustomCursor] Creating cursor element');
     const cursor = document.createElement('div');
     cursor.className = 'custom-cursor';
     // 添加过渡效果，让光标消失和出现更平滑
     cursor.style.transition = 'opacity 0.3s ease, transform 0.15s ease';
+    // 强制设置关键样式以确保可见性
+    cursor.style.position = 'fixed';
+    cursor.style.width = '12px';
+    cursor.style.height = '12px';
+    cursor.style.background = 'white';
+    cursor.style.borderRadius = '50%';
+    cursor.style.pointerEvents = 'none';
+    cursor.style.zIndex = '9999';
+    cursor.style.mixBlendMode = 'difference';
+    cursor.style.transform = 'translate(-50%, -50%)';
     document.body.appendChild(cursor);
     cursorRef.current = cursor;
+    console.log('[useCustomCursor] Cursor element created and appended to body', cursor);
 
     const animate = () => {
       if (isVisible.current) {

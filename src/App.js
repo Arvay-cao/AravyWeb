@@ -37,8 +37,6 @@ function HomePage() {
     const triggersRef = useRef([]);
     // Initialize smooth scroll
     useLenis();
-    // Initialize custom cursor
-    useCustomCursor();
     useEffect(() => {
         // Background color transitions based on sections
         const sections = [
@@ -82,6 +80,8 @@ function HomePage() {
     return (_jsxs("div", { ref: mainRef, className: "relative", children: [_jsx("div", { id: "hero-section", children: _jsx(Hero, {}) }), _jsx(About, {}), _jsx("div", { id: "projects", children: _jsx(Projects, {}) }), _jsx("div", { id: "skills", children: _jsx(Skills, {}) }), _jsx("div", { id: "contact", children: _jsx(Contact, {}) }), _jsx("div", { id: "footer-section", children: _jsx(Footer, {}) })] }));
 }
 function App() {
+    // Initialize custom cursor for all pages
+    useCustomCursor();
     // Set document language and title
     useEffect(() => {
         if (siteConfig.language) {
