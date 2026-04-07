@@ -4,7 +4,7 @@ import { Outlet, useNavigate, useLocation, Link } from 'react-router-dom';
 import { LayoutDashboard, FileText, Settings, LogOut, Menu, Home, User, Briefcase, Code, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import useCustomCursor from '@/hooks/useCustomCursor';
+
 const menuItems = [
     { icon: LayoutDashboard, label: '仪表盘', href: '/admin/dashboard' },
     { icon: Home, label: '首页配置', href: '/admin/config/hero' },
@@ -19,8 +19,7 @@ export default function AdminLayout() {
     const navigate = useNavigate();
     const location = useLocation();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    // Initialize custom cursor
-    useCustomCursor();
+
     useEffect(() => {
         // 检查登录状态
         const isLoggedIn = sessionStorage.getItem('admin_logged_in') === 'true';
