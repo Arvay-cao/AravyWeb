@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-
+import useCustomCursor from '@/hooks/useCustomCursor';
 
 const menuItems = [
   { icon: LayoutDashboard, label: '仪表盘', href: '/admin/dashboard' },
@@ -32,7 +32,8 @@ export default function AdminLayout() {
   const location = useLocation();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-
+  // Initialize custom cursor
+  useCustomCursor();
 
   useEffect(() => {
     // 检查登录状态
